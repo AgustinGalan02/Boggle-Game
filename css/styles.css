@@ -45,6 +45,8 @@ button {
   padding: 0.75rem 1.5rem;
   transition: background-color 0.3s;
   margin-top: 2rem;
+  margin: 2rem auto 0;
+  min-width: 250px;
 }
 
 button:hover {
@@ -53,9 +55,13 @@ button:hover {
 
 footer {
   background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
   color: white;
   padding: 1rem;
-  text-align: center;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: bold;
 }
 
 .game_board {
@@ -132,7 +138,7 @@ input {
   font-size: 1rem;
   margin: 1rem 2rem auto auto;
   padding: 0.75rem 1rem;
-  width: 100%;
+  width: 30%;
   max-width: 20rem;
   transition: border-color 0.3s;
 }
@@ -158,6 +164,13 @@ select {
 select:focus {
   border-color: #3498db;
   outline: none;
+}
+
+#start_game {
+    display: flex;
+    margin: 2rem auto 0;
+    min-width: 250px; 
+    justify-content: center;
 }
 
 #found_words {
@@ -199,6 +212,18 @@ select:focus {
   margin-top: 1rem;
 }
 
+#ranking_contact_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#ranking_contact_section button {
+  width: auto;
+  min-width: 250px; 
+}
+
 /*media queries */
 @media (max-width: 600px) {
   body {
@@ -232,7 +257,6 @@ select:focus {
     flex-direction: column;
     gap: 1rem;
   }
-
 
   input,
   select {
@@ -272,6 +296,10 @@ select:focus {
     width: 100%;
   }
 
+  #ranking_contact_section {
+    flex-direction: column;
+  }
+  
   #ranking_contact_section button {
     width: 100%;
     margin-bottom: 0.5rem;
@@ -283,12 +311,71 @@ select:focus {
     width: 500px;
 }
 
+/* PAGINA CONTACTO */
+/* Contact Page Styles */
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+#contact-form label {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#contact-form input {
+  width: 90%;
+}
+
+#contact-form textarea {
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  color: #2c3e50;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+main section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+}
 
 
-/* HIDDEN TEMPORAL */
-#word_list, #timer, #score_section, #result_container, #ranking_contact_section, #message_modal, #ranking_modal {
+
+/* HIDDEN TEMPORAL *
+#word_list, #timer, #score_section, #result_container, #message_modal, #ranking_modal {
     display: none;
 }
 .game_buttons {
     display: none;
 }
+
+
+
