@@ -1,89 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOGGLE</title>
+    <title>Boggle Game</title>
+    <link rel="icon" type="image/png" href="/images/boggle_icon.jpg">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
-        <img src="/images/boggle_logo.png" alt="Logo Boggle" id="logo_image">
-        <h1>Boggle - Encuentra Palabras</h1>
+        <h1>BOGGLE GAME</h1>
     </header>
+    
     <main class="container">
-        <section class="game_setup">
-            <h2>Menú</h2>
-            <form id="player_form">
-                <label for="player_name">Nombre del jugador:</label>
-                <input type="text" id="player_name" name="player_name" maxlength="20">
+        <section class="game_setup"> <!--Configuracion inicial-->
+            <label for="player_name">Nombre del Jugador:</label>
+            <input type="text" id="player_name" maxlength="20">
+            <button id="start_game">Iniciar Juego</button>
+            <div class="time_board_select">
                 <label for="timer_select">Tiempo (minutos):</label>
-                <select id="timer_select" name="timer_select">
-                   <option value="1">1</option>
-                   <option value="2">2</option>
-                   <option value="3">3</option>
+                <select id="timer_select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
-                <button type="button" id="start_game">Iniciar Juego</button>
-            </form>
-        </section>
-        <section class="game_area">
-            <div id="timer">00:00</div>
-            <div id="boggle_board"></div> <!--Tabla 4x4 generada en JS-->
-            <div id="current_word"></div>
-            <div class="game_buttons">
-                <button id="submit_word">Agregar Palabra</button>
-                <button id="reset_word">Rotar Palabras</button>
-                <button id="end_game">Finalizar</button>
             </div>
         </section>
-        <section id="word_list">
-            <h2>Palabras encontradas:</h2>
+
+        <section class="game_area"> <!--Configuracion juego-->
+            <div id="timer">00:00</div>
+            <div id="boggle_board"></div>
+            <div id="current_word"></div>
+            <button id="submit_word">Agregar Palabra</button>
+            <button id="reset_word">Rotar palabras</button>
+            <button id="end_game">Finalizar</button>
+        </section>
+
+        <section id="word_list"> 
+            <h2>Palabras Encontradas:</h2>
             <ul id="found_words"></ul>
         </section>
-        <section id="score_section">
-            <p id="score">Puntuación: 0</p>
+
+        <section id="score">
+            <p>Puntuación: 0</p>
         </section>
+
         <section id="result_container">
-            <h2>Resultado del juego</h2>
+            <h2>Resultado del Juego:</h2>
             <p id="final_score"></p>
             <p id="total_words"></p>
             <p id="best_word"></p>
-            <p id="play_again">Jugar de nuevo</p>
+            <p id="longest_word"></p>
+            <button id="play_again">Jugar de nuevo</button>
         </section>
-        <section id="ranking_contact_section">
-            <button id="show_ranking">Mostrar ranking</button>
-            <button id="contact">Contacto</button>
-        </section>
-        <!--Modales-->
-        <div id="message_modal" class="modal">
+
+        <div id="message_modal" class="modal"> <!--Modal para mostrar mensajes-->
             <div class="modal_content">
-                <button class="close">&times;</button> <!--Genera una x para cerrar el modal-->
+                <span class="close">&times;</span>
                 <p id="message_text"></p>
             </div>
         </div>
+
         <div id="ranking_modal" class="modal">
             <div class="modal_content">
-                <button class="close">&times;</button>
+                <span class="close">&times;</span>
                 <h2>Ranking</h2>
-                <button id="sort_by_score">Ordenar por puntuación</button>
-                <button id="sort_by_date">Ordenar por fecha</button>
+                <button id="sort_by_score">Ordenar por Puntuación</button>
+                <button id="sort_by_date">Ordenar por Fecha</button>
                 <ul id="ranking_list"></ul>
             </div>
         </div>
+
+        <div id="ranking_contact_container">
+            <button id="show_ranking">Mostrar ranking</button>
+            <button id="contact">Contacto</button>
+        </div>
     </main>
+
     <footer>
         <p>&copy; Boggle Game - Agustín Galán</p>
         <a href="https://github.com/AgustinGalan02/Boogle-Game" target="_blank">
             <i class="fab fa-github fa-2x"></i>
         </a>
     </footer>
+    <script src="/js/initialize.js"></script>
+    <script src="/js/timer.js"></script>
+    <script src="/js/board.js"></script>
+    <script src="/js/word_validation.js"></script>
+    <script src="/js/score.js"></script>
+    <script src="/js/ranking.js"></script>
+    <script src="/js/main.js"></script>
 </body>
-<script src="/scripts/board.js"></script>
-<script src="/scripts/word_validation.js"></script>
-<script src="/scripts/score.js"></script>
-<script src="/scripts/ranking.js"></script>
-<script src="/scripts/timer.js"></script>
-<script src="/scripts/main.js"></script>
 </html>

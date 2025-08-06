@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Contacto</h1>
-    </header>
-    <main>
-        <section>
-            <div class="back_class">
-                <button type="button" id="back_button">Volver</button>
-            </div>
-        </section>
-        <section>
-            <h2>Envíanos un mensaje</h2>
-            <form id="contact-form">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required maxlength="40">
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required maxlength="40">
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required maxlength="150"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-        <!--Modal-->
-        <div id="modal">
-            <div id="modal_content">
-                <p id="modal_message">Mensaje de error</p>
-                <button id="close_modal">Cerrar</button>
-            </div>
+  <header>
+    <h1>Contacto</h1>
+  </header>
+
+  <main>
+    <section>
+        <div class="container">
+            <button type="button" id="back_button">Volver</button>
         </div>
-    </main>
-    <footer>
+    </section>
+    <section>
+      <form id="contact_form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <div id="message_modal" class="modal">
+        <div class="modal_content">
+            <span class="close">&times;</span>
+            <p id="message_text"></p>
+        </div>
+    </div>
+
+  </main>
+
+  <footer>
         <p>&copy; Boggle Game - Agustín Galán</p>
         <a href="https://github.com/AgustinGalan02/Boogle-Game" target="_blank">
             <i class="fab fa-github fa-2x"></i>
         </a>
     </footer>
-    <script src="/scripts/contact.js"></script>
+  <script src="/js/contact.js"></script>
 </body>
 </html>
