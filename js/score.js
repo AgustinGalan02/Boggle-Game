@@ -1,10 +1,9 @@
 'use strict';
 
-// Actualiza el puntaje del jugador
-function update_score(word_length, calculating_best_word) {
+function update_score(word_length) {
     var points = 0;
 
-    // Si la palabra es inválida, penalizar (valor negativo)
+    // Si la palabra es invlida, penalizar
     if (word_length < 0) {
         score += word_length;
 
@@ -16,7 +15,7 @@ function update_score(word_length, calculating_best_word) {
         return word_length;
     }
 
-    // Calcular puntos según longitud de la palabra válida
+    // Calcular puntos segun longitud de la palabra
     if (word_length === 3 || word_length === 4) {
         points = 1;
     } else if (word_length === 5) {
@@ -29,11 +28,8 @@ function update_score(word_length, calculating_best_word) {
         points = 11;
     }
 
-    // Sumar al puntaje si no es cálculo del mejor movimiento
-    if (!calculating_best_word) {
-        score += points;
-        score_display.innerHTML = 'Puntuación: ' + score;
-    }
+    score += points;
+    score_display.innerHTML = 'Puntuación: ' + score;
 
     return points;
 }

@@ -13,10 +13,16 @@ var forbidden_words = [
 
 function check_word_validity_callback(is_valid) {
   if (is_valid) {
+
+    //se agrega la palabra al array de palabras encontradas
     found_words.push(current_word);
+
+    // se crea elemento <li> y se agrega al DOM
     var list_item = document.createElement('li');
     list_item.innerText = current_word;
     found_words_list.appendChild(list_item);
+
+    //se suma el puntaje
     update_score(current_word.length);
   } else {
     show_message('La palabra no es válida.');
@@ -71,5 +77,6 @@ function submit_word() {
     return;
   }
 
+  //toma la palabra y verifica con la API si es verdadera o falsa
   check_word_validity(current_word.toLowerCase(), check_word_validity_callback);
 }

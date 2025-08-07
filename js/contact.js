@@ -7,8 +7,10 @@ var modal_text = document.getElementById('message_text');
 var close_modal_buttons = document.getElementsByClassName('close');
 var back = document.getElementById('back_button');
 
+
+//validacion nombre y email
 var name_regex = /^[a-zA-Z0-9\s]+$/;
-var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // usuario@dominio.com
 
 // Funcion modal
 function show_modal(message) {
@@ -24,6 +26,7 @@ function close_modal() {
 // Función para enviar el correo
 function send_email(name, message) {
     var destination_email = 'agustingalan4@gmail.com';
+    //usado para convertir texto a url
     var subject = encodeURIComponent('Contacto Boggle Game - ' + name);
     var body = encodeURIComponent(message + '\n\n' + 'Desde ya muchas gracias, ' + name);
     var mail_to_link = 'mailto:' + destination_email + '?subject=' + subject + '&body=' + body;
@@ -69,16 +72,20 @@ function go_back() {
 
 // Función que asigna los listeners al cargar el DOM
 function initialize_event_listeners() {
+    // para cerrar modales
     var i;
     for (i = 0; i < close_modal_buttons.length; i++) {
         close_modal_buttons[i].addEventListener('click', close_modal);
     }
 
+    // enviar formulario
     form.addEventListener('submit', validate_form);
 
+    //boton volver
     if (back !== null) {
         back.addEventListener('click', go_back);
     }
 }
 
+//espera que se cargue el HTML para ejecutar la funcion
 document.addEventListener('DOMContentLoaded', initialize_event_listeners);

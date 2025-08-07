@@ -10,11 +10,8 @@ var sort_by_date_button = document.getElementById('sort_by_date');
 var reset_word_button = document.getElementById('reset_word');
 var end_game_button = document.getElementById('end_game');
 var close_modal_buttons = document.getElementsByClassName('close');
-var close_modal_buttons_2 = document.getElementsByClassName('close_2');
 var contact_button = document.getElementById('contact');
-
 var ranking_modal = document.getElementById('ranking_modal');
-var close_buttons = ranking_modal.getElementsByClassName('close');
 
 // === Asignar eventos ===
 start_game_button.addEventListener('click', start_game);
@@ -27,11 +24,8 @@ reset_word_button.addEventListener('click', reset_board);
 end_game_button.addEventListener('click', finish_game);
 contact_button.addEventListener('click', go_to_contact_page);
 
+//cerrar modales
 Array.prototype.forEach.call(close_modal_buttons, add_close_modal_listener);
-Array.prototype.forEach.call(close_modal_buttons_2, add_close_modal_2_listener);
-Array.prototype.forEach.call(close_buttons, add_close_ranking_modal_listener);
-
-window.addEventListener('click', handle_click_outside_modal);
 
 // === Inicializar juego ===
 initialize_game();
@@ -81,16 +75,11 @@ function hide_ranking_modal() {
 // === FUNCIÓN DE TERMINAR JUEGO ===
 
 function finish_game() {
-    clearInterval(timer);
+    clearInterval(timer); // detiene el temporizador
 
     var player_name_input = document.getElementById('player_name');
     var player_name = player_name_input.value.trim();
 
-    if (player_name.length < 3) {
-        show_message('Por favor, ingresa un nombre válido (3 o más caracteres) para guardar el resultado.');
-        return;
-    }
-
-    save_game_result(player_name, score);
-    end_game(); // Mostrar sección de resultados
+    save_game_result(player_name, score); // se guarda la puntuacion y nombre en la funcion de ranking
+    end_game(); // se termina el juego y se muestran los resultados
 }
