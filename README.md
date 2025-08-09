@@ -1,31 +1,27 @@
-# Boggle Game
+# 🔠 🎯 Boggle Game
 
 ## Descripción del Proyecto
 
-Boggle_game es un juego de búsqueda de palabras para un solo jugador que se juega en un tablero de 4x4 con letras aleatorias. El jugador debe formar la mayor cantidad posible de palabras válidas seleccionando letras contiguas dentro de un límite de tiempo. Las palabras deben tener al menos 3 letras y las letras deben estar adyacentes horizontal, vertical o diagonalmente. Se otorgan puntos según la longitud de la palabra y se aplican penalizaciones por palabras inválidas o repetidas.
+Juego de búsqueda de palabras en un tablero 4x4 donde el jugador debe formar el mayor número posible de palabras válidas antes de que el tiempo se agote.
 
 ---
 
-## Funcionalidades
+## 🔧 Funcionalidades Principales
 
-- Tablero de 4x4 con letras asignadas aleatoriamente  
-- Validación de palabras mediante consulta en diccionario online  
-- Sistema de puntuación basado en la longitud de las palabras  
-- Temporizador con opciones de 1, 2 o 3 minutos  
-- Resalta las letras que pueden seleccionarse a continuación  
-- No permite reutilizar letras en la misma palabra.
-- Feedback al usuario mediante modales.
-- Listado en tiempo real de palabras encontradas  
-- Ranking persistente guardado en localStorage  
-- Modal de ranking con opción de ordenar por puntaje o fecha.  
+- **Tablero 4x4 🧩** – Letras asignadas aleatoriamente en cada partida
+- **Validación de palabras 📚** – Mediante API de un diccionario online
+- **Sistema de puntuación 🏆** – Basado en la longitud de las palabras con penalizaciones por errores o repeticiones
+- **Temporizador ⏱️** – Opciones de 1, 2 o 3 minutos por partida
+- **Sistema de Ranking 🥇** – Guardado en localStorage con opción de ordenar por puntaje o fecha
+- **Diseño Responsive 📱** – Adaptado a diferentes dispositivos usando Flexbox
 
 ---
 
 ## Tecnologías Utilizadas
 
-- HTML5 (marcado semántico y accesible)  
-- CSS3 (Flexbox para diseño y responsividad)  
-- JavaScript (sintaxis ES5, estructura modular, snake_case)  
+- **HTML5** - Estructura de la página web
+- **CSS3** - Estilos y diseño responsive
+- **JavaScript** - Interactividad y funciones del juego
 
 ---
 
@@ -40,3 +36,6 @@ Boggle_game es un juego de búsqueda de palabras para un solo jugador que se jue
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## 🔗 Link
+[![Boogle](https://agustingalan02.github.io/html/)](https://www.giantbomb.com/a/uploads/scale_medium/8/88377/2135367-boggle_logo.png)
