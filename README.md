@@ -37,5 +37,5 @@ Juego de búsqueda de palabras en un tablero 4x4 donde el jugador debe formar el
 
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## 🔗 Link
+## 🔗 Link para probar el juego
 [![Boogle](https://www.giantbomb.com/a/uploads/scale_medium/8/88377/2135367-boggle_logo.png)](https://agustingalan02.github.io/html/)
